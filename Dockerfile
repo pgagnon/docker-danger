@@ -1,7 +1,12 @@
-FROM ruby:2.3.1
+FROM ruby:2-alpine
 
-RUN gem install danger && \
-    gem install danger-commit_lint && \
-    gem install danger-prose
+RUN gem install --no-document \
+    danger \
+    danger-commit_lint \
+    danger-prose \
+    danger-changelog \
+    danger-mention \
+    danger-jenkins \
+    danger-gitlab
 
 ENTRYPOINT danger
