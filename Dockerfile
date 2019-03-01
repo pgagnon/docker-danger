@@ -7,7 +7,6 @@ RUN gem install --no-document \
     danger-prose \
     danger-changelog \
     danger-mention \
-    danger-jenkins \
     danger-gitlab
     
 RUN apk update && apk upgrade && \
